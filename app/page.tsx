@@ -162,18 +162,15 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 auto-rows-[150px] md:auto-rows-[200px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[150px] md:auto-rows-[250px] grid-flow-row-dense">
             {[
-              { year: "2025", title: "春の特別公演", img: "/images/gallery/実績2.jpg", span: "col-span-2 row-span-2" },
-              { year: "2024", title: "Winter Dance", img: "/images/gallery/実績3.jpg", span: "col-span-1 row-span-1" },
-              { year: "2024", title: "Autumn Festival", img: "/images/gallery/実績5.jpg", span: "col-span-1 row-span-1" },
-              { year: "2023", title: "The Shining Stars", img: "/images/gallery/実績6.jpg", span: "col-span-2 md:col-span-1 row-span-2" },
-              { year: "2023", title: "Summer Concert", img: "/images/gallery/実績7 (1).jpg", span: "col-span-1 row-span-1" },
-              { year: "2022", title: "Melody of Dreams", img: "/images/gallery/実績7 (2).jpg", span: "col-span-2 md:col-span-2 lg:col-span-3 row-span-1" },
-              { year: "2022", title: "First Step", img: "/images/gallery/実績2.jpg", span: "col-span-1 row-span-1" },
-              { year: "2021", title: "Overture", img: "/images/gallery/実績3.jpg", span: "col-span-1 lg:col-span-2 row-span-1" },
-              { year: "2020", title: "Studio Live", img: "/images/gallery/実績5.jpg", span: "col-span-1 row-span-1" },
-              { year: "2019", title: "プレ公演", img: "/images/gallery/実績6.jpg", span: "col-span-1 row-span-1" }
+              { year: "2025", title: "春の特別公演", img: "/images/gallery/実績1.jpg", span: "col-span-2 lg:col-span-2 row-span-2" },
+              { year: "2024", title: "Winter Dance", img: "/images/gallery/実績2.jpg", span: "col-span-1 row-span-2" },
+              { year: "2024", title: "Autumn Festival", img: "/images/gallery/実績3.jpg", span: "col-span-1 row-span-1" },
+              { year: "2023", title: "The Shining Stars", img: "/images/gallery/実績4.jpg", span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1" },
+              { year: "2023", title: "Summer Concert", img: "/images/gallery/実績5.jpg", span: "col-span-2 lg:col-span-2 row-span-2" },
+              { year: "2022", title: "Melody of Dreams", img: "/images/gallery/実績6.jpg", span: "col-span-1 lg:col-span-1 row-span-2" },
+              { year: "2021", title: "First Step", img: "/images/gallery/実績7.jpg", span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-2 md:row-span-1 lg:row-span-2" }
             ].map((perf, i) => (
               <div 
                 key={i} 
