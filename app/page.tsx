@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { MoveRight, MapPin, MessageCircle } from "lucide-react";
+import { MoveRight, MessageCircle, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <div className="relative min-h-screen bg-stone-50 pb-24">
       {/* Hero Section */}
@@ -47,16 +52,23 @@ export default function Home() {
         </div>
 
         {/* Lesson CTA Block */}
-        <div className="bg-white border border-stone-200 p-8 md:p-12 rounded-sm shadow-sm inline-block max-w-2xl w-full">
-          <MapPin className="mx-auto text-stone-400 mb-4" size={28} />
-          <h3 className="font-serif text-xl font-medium text-stone-800 tracking-wider mb-4">レッスンについて</h3>
-          <p className="font-sans text-stone-500 text-sm mb-8">
+        <div className="bg-white border border-stone-200 p-8 md:p-12 shadow-sm inline-block max-w-2xl w-full text-center">
+          <div className="relative w-16 h-16 mx-auto mb-6 rounded-full overflow-hidden shadow-sm">
+            <Image 
+              src="/images/practice.jpg" 
+              alt="レッスンの様子" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+          <h3 className="font-serif text-xl font-medium text-stone-800 tracking-wider mb-6">レッスンについて</h3>
+          <p className="font-sans text-stone-500 text-sm mb-10 leading-relaxed">
             初めての方向けのキッズクラスから、プロを目指す実践的な指導まで。<br/>
             場所、費用、各クラスのご案内をまとめています。
           </p>
           <Link 
             href="/lessons"
-            className="inline-flex items-center gap-3 bg-stone-800 text-stone-50 px-8 py-4 rounded-sm hover:bg-stone-700 transition-colors font-sans text-sm tracking-widest uppercase"
+            className="inline-flex items-center gap-3 bg-[#2d2926] text-white px-10 py-4 rounded-sm hover:bg-black transition-colors font-sans text-sm tracking-widest"
           >
             レッスン詳細を見る <MoveRight size={16} />
           </Link>
@@ -112,13 +124,17 @@ export default function Home() {
             { tag: "特別レッスン", title: "プロ向けオーディション対策", img: "/images/practice.jpg" },
             { tag: "キッズクラス", title: "はじめてのダンスポーズ", img: "/images/practice2.jpg" }
           ].map((scene, i) => (
-            <div key={i} className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group">
+            <div 
+              key={i} 
+              className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer"
+              onClick={() => setSelectedImage(scene.img)}
+            >
               <div className="relative aspect-4/3 w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:opacity-90">
                 <Image
                   src={scene.img}
                   alt={scene.title}
                   fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
                 />
               </div>
               <div className="text-stone-500 text-xs tracking-widest font-sans mb-1">{scene.tag}</div>
@@ -143,18 +159,22 @@ export default function Home() {
         
         <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {[
-            { year: "2023", title: "ミュージカル公演「The Shining Stars」" },
-            { year: "2022", title: "サマーコンサート「Melody of Dreams」" },
-            { year: "2021", title: "スタジオパフォーマンス「First Step」" },
-            { year: "2020", title: "プレ公演「Overture」" }
+            { year: "2023", title: "ミュージカル公演「The Shining Stars」", img: "/images/poster.jpg" },
+            { year: "2022", title: "サマーコンサート「Melody of Dreams」", img: "/images/poster.jpg" },
+            { year: "2021", title: "スタジオパフォーマンス「First Step」", img: "/images/poster.jpg" },
+            { year: "2020", title: "プレ公演「Overture」", img: "/images/poster.jpg" }
           ].map((perf, i) => (
-            <div key={i} className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer">
+            <div 
+              key={i} 
+              className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer"
+              onClick={() => setSelectedImage(perf.img)}
+            >
               <div className="relative aspect-3/4 w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
                 <Image
-                  src="/images/poster.jpg"
+                  src={perf.img}
                   alt={perf.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-all duration-700"
                 />
               </div>
               <div className="text-stone-500 text-xs tracking-widest font-sans mb-1">{perf.year}</div>
@@ -163,6 +183,35 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8 backdrop-blur-sm transition-opacity duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-6 right-6 text-white hover:text-stone-300 transition-colors bg-black/50 rounded-full p-2"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+          >
+            <X size={28} />
+          </button>
+          <div 
+            className="relative w-full max-w-5xl h-[80vh] rounded-sm overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage}
+              alt="拡大画像"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Future Events CTA */}
       <section className="bg-stone-800 text-center py-24 px-6">
