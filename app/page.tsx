@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
+
+const LineIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .349-.281.63-.63.63h-2.386a.63.63 0 0 1-.63-.63V8.108a.63.63 0 0 1 .63-.63h2.386c.349 0 .63.282.63.63 0 .349-.281.631-.63.631H17.61v1.125h1.755zm-3.855 3.016a.63.63 0 0 1-.63.63.629.629 0 0 1-.51-.262l-2.397-3.282v2.913a.63.63 0 0 1-1.26 0V8.108a.63.63 0 0 1 .63-.63c.2 0 .385.095.51.262l2.397 3.282V8.108a.63.63 0 0 1 1.26 0v4.771zm-5.741 0a.63.63 0 0 1-1.26 0V8.108a.63.63 0 0 1 1.26 0v4.771zm-2.462.63H4.921a.63.63 0 0 1-.63-.63V8.108a.63.63 0 0 1 1.261 0v4.14h1.756c.348 0 .629.283.629.631 0 .348-.281.63-.629.63zM24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.084.923.258 1.058.593.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.309 14.09 24 12.315 24 10.314z" />
+  </svg>
+);
 import { useState, useEffect, useRef, useCallback } from "react";
 
 // Scroll-triggered fade-in hook
@@ -68,7 +74,7 @@ export default function Home() {
               <Link href="/instructor" className="text-stone-500 hover:text-stone-800 transition-colors font-sans text-xs tracking-[0.15em] uppercase hidden sm:block">Instructor</Link>
               <Link href="/events" className="text-stone-500 hover:text-stone-800 transition-colors font-sans text-xs tracking-[0.15em] uppercase hidden sm:block">Events</Link>
               <a href="#" className="bg-[#06C755] text-white px-4 py-1.5 rounded-full font-sans text-xs tracking-wider flex items-center gap-1.5 hover:opacity-90 transition-opacity">
-                <MessageCircle size={13} className="fill-white" /> LINE
+                <LineIcon size={14} /> LINE
               </a>
             </div>
           </div>
@@ -361,7 +367,7 @@ export default function Home() {
             href="#"
             className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white px-10 py-4 rounded-full hover:opacity-90 transition-opacity font-sans font-medium tracking-wide text-sm"
           >
-            <MessageCircle size={18} className="fill-white" />
+            <LineIcon size={20} />
             公式LINEで相談する
           </a>
         </FadeUp>
