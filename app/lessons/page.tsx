@@ -25,7 +25,7 @@ export default function LessonsPage() {
             </div>
             <div className="space-y-10">
               <div>
-                <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">ミュージカルダンスレッスン</h3>
+                <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">ダンスレッスン</h3>
                 <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">火曜　17:40〜19:10</p>
                 <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">本気で楽しむ、ミュージカルダンス。</p>
                 <p className="text-stone-600 font-sans text-sm leading-[2]">
