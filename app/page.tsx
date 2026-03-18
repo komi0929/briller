@@ -6,7 +6,7 @@ import { MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ img: string; title?: string; year?: string } | null>(null);
 
   return (
     <div className="relative min-h-screen bg-stone-50 pb-24">
@@ -127,7 +127,7 @@ export default function Home() {
             <div 
               key={i} 
               className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer"
-              onClick={() => setSelectedImage(scene.img)}
+              onClick={() => setSelectedImage({ img: scene.img, title: scene.title })}
             >
               <div className="relative aspect-4/3 w-full mb-6 overflow-hidden rounded-sm transition-transform duration-500 group-hover:opacity-90">
                 <Image
@@ -170,23 +170,25 @@ export default function Home() {
               { year: "2023", title: "The Shining Stars", img: "/images/gallery/実績4.jpg", span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1" },
               { year: "2023", title: "Summer Concert", img: "/images/gallery/実績5.jpg", span: "col-span-2 lg:col-span-2 row-span-2" },
               { year: "2022", title: "Melody of Dreams", img: "/images/gallery/実績6.jpg", span: "col-span-1 lg:col-span-1 row-span-2" },
-              { year: "2021", title: "First Step", img: "/images/gallery/実績7.jpg", span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-2 md:row-span-1 lg:row-span-2" }
+              { year: "2022", title: "First Step", img: "/images/gallery/実績8.jpg", span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1" },
+              { year: "2021", title: "Overture", img: "/images/gallery/実績9.jpg", span: "col-span-1 row-span-1" },
+              { year: "2020", title: "Studio Live", img: "/images/gallery/実績7.jpg", span: "col-span-2 md:col-span-3 lg:col-span-2 row-span-1" }
             ].map((perf, i) => (
               <div 
                 key={i} 
                 className={`relative group cursor-pointer overflow-hidden rounded-sm bg-stone-800 ${perf.span}`}
-                onClick={() => setSelectedImage(perf.img)}
+                onClick={() => setSelectedImage({ img: perf.img, title: perf.title, year: perf.year })}
               >
                 <Image
                   src={perf.img}
                   alt={perf.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal"
+                  className="object-cover transition-transform duration-700 md:group-hover:scale-110 opacity-80 md:group-hover:opacity-100 mix-blend-luminosity md:group-hover:mix-blend-normal"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-stone-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute bottom-0 left-0 p-4 md:p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute inset-0 bg-linear-to-t from-stone-900/90 via-stone-900/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 p-4 md:p-6 translate-y-0 md:translate-y-4 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500">
                   <p className="text-stone-300 text-xs tracking-[0.2em] font-sans mb-1">{perf.year}</p>
-                  <h3 className="font-serif text-stone-50 text-sm md:text-lg tracking-wide">{perf.title}</h3>
+                  <h3 className="font-serif text-stone-50 text-sm md:text-lg tracking-wide shadow-sm">{perf.title}</h3>
                 </div>
               </div>
             ))}
@@ -210,15 +212,30 @@ export default function Home() {
             <X size={28} />
           </button>
           <div 
-            className="relative w-[85vw] md:w-[80vw] h-[80vh] max-w-6xl shadow-2xl animate-in fade-in zoom-in-[0.98] duration-300"
+            className="relative w-[90vw] md:w-[80vw] h-[80vh] max-w-6xl shadow-2xl animate-in fade-in zoom-in-[0.98] duration-300 flex flex-col justify-end overflow-hidden rounded-sm"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={selectedImage}
+              src={selectedImage.img}
               alt="拡大画像"
               fill
-              className="object-contain drop-shadow-2xl"
+              className="object-contain md:drop-shadow-2xl z-0"
             />
+            
+            {(selectedImage.title || selectedImage.year) && (
+              <div className="relative z-10 w-full bg-linear-to-t from-stone-900/90 via-stone-900/60 to-transparent pt-16 pb-8 px-6 text-center md:text-left transition-opacity duration-300">
+                {selectedImage.year && (
+                  <p className="text-stone-300 font-sans text-xs tracking-[0.2em] mb-2 uppercase">
+                    {selectedImage.year}
+                  </p>
+                )}
+                {selectedImage.title && (
+                  <h3 className="font-serif text-2xl md:text-3xl font-medium text-stone-50 tracking-wider">
+                    {selectedImage.title}
+                  </h3>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}
