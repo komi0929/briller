@@ -55,7 +55,7 @@ export default function Home() {
         <div className="py-12 md:py-16 inline-block max-w-2xl w-full text-center">
           <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-10 rounded-full overflow-hidden border-2 border-stone-200">
             <Image 
-              src="/images/practice.jpg" 
+              src="/images/gallery/レッスン.jpg" 
               alt="レッスンの様子" 
               fill 
               className="object-cover"
@@ -119,10 +119,10 @@ export default function Home() {
         </p>
         <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {[
-            { tag: "キッズクラス", title: "基礎発声とリズム遊び", img: "/images/practice.jpg" },
-            { tag: "一般クラス", title: "グループでの歌唱指導", img: "/images/practice2.jpg" },
-            { tag: "特別レッスン", title: "プロ向けオーディション対策", img: "/images/practice.jpg" },
-            { tag: "キッズクラス", title: "はじめてのダンスポーズ", img: "/images/practice2.jpg" }
+            { tag: "キッズクラス", title: "基礎発声とリズム遊び", img: "/images/gallery/レッスン.jpg" },
+            { tag: "一般クラス", title: "グループでの歌唱指導", img: "/images/gallery/レッスン.jpg" },
+            { tag: "特別レッスン", title: "プロ向けオーディション対策", img: "/images/gallery/レッスン.jpg" },
+            { tag: "キッズクラス", title: "はじめてのダンスポーズ", img: "/images/gallery/レッスン.jpg" }
           ].map((scene, i) => (
             <div 
               key={i} 
@@ -164,16 +164,16 @@ export default function Home() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 auto-rows-[150px] md:auto-rows-[200px]">
             {[
-              { year: "2025", title: "春の特別公演", img: "/images/poster.jpg", span: "col-span-2 row-span-2" },
-              { year: "2024", title: "Winter Dance", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
-              { year: "2024", title: "Autumn Festival", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
-              { year: "2023", title: "The Shining Stars", img: "/images/practice.jpg", span: "col-span-2 md:col-span-1 row-span-2" },
-              { year: "2023", title: "Summer Concert", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
-              { year: "2022", title: "Melody of Dreams", img: "/images/practice.jpg", span: "col-span-2 md:col-span-2 lg:col-span-3 row-span-1" },
-              { year: "2022", title: "First Step", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
-              { year: "2021", title: "Overture", img: "/images/poster.jpg", span: "col-span-1 lg:col-span-2 row-span-1" },
-              { year: "2020", title: "Studio Live", img: "/images/practice.jpg", span: "col-span-1 row-span-1" },
-              { year: "2019", title: "プレ公演", img: "/images/poster.jpg", span: "col-span-1 row-span-1" }
+              { year: "2025", title: "春の特別公演", img: "/images/gallery/実績2.jpg", span: "col-span-2 row-span-2" },
+              { year: "2024", title: "Winter Dance", img: "/images/gallery/実績3.jpg", span: "col-span-1 row-span-1" },
+              { year: "2024", title: "Autumn Festival", img: "/images/gallery/実績5.jpg", span: "col-span-1 row-span-1" },
+              { year: "2023", title: "The Shining Stars", img: "/images/gallery/実績6.jpg", span: "col-span-2 md:col-span-1 row-span-2" },
+              { year: "2023", title: "Summer Concert", img: "/images/gallery/実績7 (1).jpg", span: "col-span-1 row-span-1" },
+              { year: "2022", title: "Melody of Dreams", img: "/images/gallery/実績7 (2).jpg", span: "col-span-2 md:col-span-2 lg:col-span-3 row-span-1" },
+              { year: "2022", title: "First Step", img: "/images/gallery/実績2.jpg", span: "col-span-1 row-span-1" },
+              { year: "2021", title: "Overture", img: "/images/gallery/実績3.jpg", span: "col-span-1 lg:col-span-2 row-span-1" },
+              { year: "2020", title: "Studio Live", img: "/images/gallery/実績5.jpg", span: "col-span-1 row-span-1" },
+              { year: "2019", title: "プレ公演", img: "/images/gallery/実績6.jpg", span: "col-span-1 row-span-1" }
             ].map((perf, i) => (
               <div 
                 key={i} 
@@ -186,7 +186,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-stone-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 p-4 md:p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-stone-300 text-xs tracking-[0.2em] font-sans mb-1">{perf.year}</p>
                   <h3 className="font-serif text-stone-50 text-sm md:text-lg tracking-wide">{perf.title}</h3>
