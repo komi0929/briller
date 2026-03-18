@@ -58,7 +58,7 @@ export default function Home() {
               src="/images/gallery/レッスン.jpg" 
               alt="レッスンの様子" 
               fill 
-              className="object-cover"
+              className="object-cover object-[center_20%]"
             />
           </div>
           <h3 className="font-serif text-xl font-medium text-stone-800 tracking-wider mb-6">レッスンについて</h3>
