@@ -23,45 +23,34 @@ export default function LessonsPage() {
               <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Courses</p>
               <h2 className="font-serif text-2xl font-medium text-stone-800 tracking-wider">コース案内</h2>
             </div>
-            <div className="space-y-8">
+            <div className="space-y-10">
               <div>
-                <h3 className="font-serif text-lg text-stone-800 mb-3 border-b border-stone-100 pb-2">キッズ・ジュニアクラス</h3>
-                <p className="text-stone-600 font-sans text-sm leading-relaxed">
-                  歌・ダンス・お芝居の基礎を通して、表現する楽しさと豊かな感性を育みます。初めて舞台に触れるお子様も安心して参加できるアットホームなクラスです。
+                <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">ミュージカルダンスレッスン</h3>
+                <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">火曜　17:40〜19:10</p>
+                <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">本気で楽しむ、ミュージカルダンス。</p>
+                <p className="text-stone-600 font-sans text-sm leading-[2]">
+                  基礎から身体づくりを行い、柔軟性・持久力・リズム感を育てます。<br/>
+                  初心者から経験者まで、技術と表現力をしっかり伸ばします。
                 </p>
               </div>
               <div>
-                <h3 className="font-serif text-lg text-stone-800 mb-3 border-b border-stone-100 pb-2">一般・大人クラス</h3>
-                <p className="text-stone-600 font-sans text-sm leading-relaxed">
-                  趣味でミュージカルを楽しみたい方から、本格的に技術を磨きたい方まで幅広く対応します。基礎の発声や身体の使い方の見直しから丁寧に行います。
+                <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">歌・演技レッスン</h3>
+                <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">木曜　18:00〜19:30</p>
+                <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">感じて、考えて、表現する。</p>
+                <p className="text-stone-600 font-sans text-sm leading-[2]">
+                  基礎を大切にしながら、想像力と表現力を育てます。<br/>
+                  自ら発想し、行動する力を養い、自己表現へと繋げていきます。
                 </p>
               </div>
               <div>
-                <h3 className="font-serif text-lg text-stone-800 mb-3 border-b border-stone-100 pb-2">プロフェッショナル・受験対策</h3>
-                <p className="text-stone-600 font-sans text-sm leading-relaxed">
-                  劇団四季などをはじめとするプロの舞台を目指す方や、音楽大学・テーマパークオーディションに向けた個別指導・実践的なテクニック指導を重点的に行います。（詳細はお問い合わせください）
+                <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">Song＆Danceレッスン<span className="text-stone-400 font-sans text-xs ml-2">小学5年生以上</span></h3>
+                <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">日曜　11:00〜12:30</p>
+                <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">歌って、踊って、魅せる。</p>
+                <p className="text-stone-600 font-sans text-sm leading-[2]">
+                  ミュージカル曲を用い、歌とダンスを総合的に学びます。<br/>
+                  舞台で通用する身体づくりと表現力を身につけていきます。
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* 頻度・スケジュール */}
-          <section className="bg-white p-8 md:p-10 rounded-sm shadow-sm border border-stone-100">
-            <div className="mb-8 border-l-2 border-stone-800 pl-4">
-              <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Schedule</p>
-              <h2 className="font-serif text-2xl font-medium text-stone-800 tracking-wider">スケジュール</h2>
-            </div>
-            <div className="text-stone-600 font-sans space-y-4 text-sm leading-relaxed">
-              <p><strong>頻度:</strong> 月4回（週1回コース）を中心にご案内しています。</p>
-              <div className="bg-stone-50 p-4 rounded mt-4">
-                <p className="text-stone-500 italic text-xs mb-2">※ 以下はスケジュールの目安です</p>
-                <ul className="space-y-2">
-                  <li><span className="inline-block w-16 text-stone-800 font-medium">木曜日</span> 17:00 - 18:30 (キッズ)</li>
-                  <li><span className="inline-block w-16 text-stone-800 font-medium">土曜日</span> 10:00 - 11:30 (一般)</li>
-                  <li><span className="inline-block w-16 text-stone-800 font-medium">日曜日</span> 13:00 - 15:00 (特別クラス)</li>
-                </ul>
-              </div>
-              <p className="text-xs text-stone-400 mt-4">具体的な曜日や時間帯については、お問い合わせ時または体験レッスン時に直接ご相談ください。</p>
             </div>
           </section>
 
