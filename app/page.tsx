@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MoveRight, MessageCircle, X } from "lucide-react";
+import { MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -52,8 +52,8 @@ export default function Home() {
         </div>
 
         {/* Lesson CTA Block */}
-        <div className="bg-white border border-stone-200 p-8 md:p-12 shadow-sm inline-block max-w-2xl w-full text-center">
-          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full overflow-hidden shadow-lg border-4 border-white">
+        <div className="py-12 md:py-16 inline-block max-w-2xl w-full text-center">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-10 rounded-full overflow-hidden border-2 border-stone-200">
             <Image 
               src="/images/practice.jpg" 
               alt="レッスンの様子" 
@@ -70,7 +70,7 @@ export default function Home() {
             href="/lessons"
             className="inline-flex items-center gap-3 bg-[#2d2926] text-white px-10 py-4 rounded-sm hover:bg-black transition-colors font-sans text-sm tracking-widest"
           >
-            レッスン詳細を見る <MoveRight size={16} />
+            レッスン詳細を見る <span className="text-lg leading-none mb-[2px]">→</span>
           </Link>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function Home() {
       {/* Instructor Section */}
       <section className="py-24 bg-stone-200/50 px-6 md:px-12">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          <div className="w-full md:w-1/2 relative aspect-3/4 rounded-sm overflow-hidden shadow-xl">
+          <div className="w-full md:w-1/2 relative aspect-3/4 rounded-sm overflow-hidden">
             <Image
               src="/images/instructor.jpg"
               alt="増本 藍"
@@ -101,9 +101,9 @@ export default function Home() {
             </div>
             <Link 
               href="/instructor"
-              className="inline-flex items-center gap-2 text-stone-800 font-sans text-sm tracking-widest uppercase hover:text-stone-500 transition-colors border-b border-stone-800 hover:border-stone-500 pb-1"
+              className="inline-flex items-center gap-3 text-stone-800 font-sans text-sm tracking-widest uppercase hover:text-stone-500 transition-colors border-b border-stone-800 hover:border-stone-500 pb-1"
             >
-              過去の詳しい出演歴・プロフィールへ <MoveRight size={16} />
+              過去の詳しい出演歴・プロフィールへ <span className="text-lg leading-none mb-[2px]">→</span>
             </Link>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function Home() {
               className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer"
               onClick={() => setSelectedImage(scene.img)}
             >
-              <div className="relative aspect-4/3 w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:opacity-90">
+              <div className="relative aspect-4/3 w-full mb-6 overflow-hidden rounded-sm transition-transform duration-500 group-hover:opacity-90">
                 <Image
                   src={scene.img}
                   alt={scene.title}
@@ -169,7 +169,7 @@ export default function Home() {
               className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer"
               onClick={() => setSelectedImage(perf.img)}
             >
-              <div className="relative aspect-3/4 w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
+              <div className="relative aspect-3/4 w-full mb-6 overflow-hidden rounded-sm transition-transform duration-500 group-hover:scale-[1.02]">
                 <Image
                   src={perf.img}
                   alt={perf.title}
@@ -224,9 +224,9 @@ export default function Home() {
         </p>
         <Link 
           href="/events"
-          className="inline-flex items-center gap-3 bg-stone-100 text-stone-900 border border-stone-100 px-8 py-4 rounded-sm hover:bg-stone-300 transition-colors font-sans text-sm tracking-widest uppercase shadow-lg"
+          className="inline-flex items-center gap-4 bg-stone-100 text-stone-900 border border-stone-100 px-8 py-4 rounded-sm hover:bg-stone-300 transition-colors font-sans text-sm tracking-widest uppercase"
         >
-          今後のイベント・出演予定 <MoveRight size={16} />
+          今後のイベント・出演予定 <span className="text-lg leading-none mb-[2px]">→</span>
         </Link>
       </section>
 
@@ -241,7 +241,7 @@ export default function Home() {
         </p>
         <a 
           href="#"
-          className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-[#05b04b] transition-all hover:scale-105 font-sans font-medium tracking-wide w-full max-w-sm mx-auto"
+          className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white px-8 py-4 rounded-full hover:bg-[#05b04b] transition-colors font-sans font-medium tracking-wide w-full max-w-sm mx-auto"
         >
           <MessageCircle size={20} className="fill-white" />
           公式LINEで相談する

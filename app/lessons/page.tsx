@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { MoveLeft } from "lucide-react";
 
 export default function LessonsPage() {
   return (
     <div className="relative min-h-screen bg-stone-50 pb-24">
-      <div className="max-w-4xl mx-auto px-6 pt-12">
+      <div className="max-w-4xl mx-auto px-6 pt-12 md:pt-24 text-center md:text-left">
         <Link 
           href="/" 
-          className="inline-flex items-center gap-2 text-stone-500 font-sans text-sm tracking-widest hover:text-stone-800 transition-colors mb-12"
+          className="inline-flex items-center gap-4 text-stone-400 font-sans text-xs tracking-[0.2em] uppercase hover:text-stone-800 transition-colors mb-20"
         >
-          <MoveLeft size={16} /> トップページへ戻る
+          <span className="text-lg leading-none mb-[2px]">←</span> Back to Home
         </Link>
         
         <h1 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-16 tracking-wider text-center">

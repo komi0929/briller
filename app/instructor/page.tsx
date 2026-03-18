@@ -1,55 +1,66 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MoveLeft } from "lucide-react";
 
 export default function InstructorPage() {
   return (
     <div className="relative min-h-screen bg-stone-50 pb-24">
-      <div className="max-w-4xl mx-auto px-6 pt-12">
-        <Link 
-          href="/" 
-          className="inline-flex items-center gap-2 text-stone-500 font-sans text-sm tracking-widest hover:text-stone-800 transition-colors mb-12"
-        >
-          <MoveLeft size={16} /> トップページへ戻る
-        </Link>
-        
-        <h1 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-16 tracking-wider text-center">
-          講師紹介
-        </h1>
+      <div className="max-w-5xl mx-auto px-6 pt-12 md:pt-24">
+        <div className="mb-20 text-center md:text-left">
+          <Link 
+            href="/" 
+            className="inline-flex items-center gap-4 text-stone-400 font-sans text-xs tracking-[0.2em] uppercase hover:text-stone-800 transition-colors mb-12"
+          >
+            <span className="text-lg leading-none mb-[2px]">←</span> Back to Home
+          </Link>
+          
+          <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-2 uppercase">
+            Instructor
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 tracking-wider">
+            講師紹介
+          </h1>
+        </div>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16 mb-24">
-          <div className="w-full md:w-1/3 relative aspect-3/4 rounded-sm overflow-hidden shadow-lg h-fit">
-            <Image
-              src="/images/instructor.jpg"
-              alt="増本 藍"
-              fill
-              className="object-cover"
-            />
+        <div className="flex flex-col md:flex-row gap-12 md:gap-24 mb-24">
+          <div className="w-full md:w-5/12 shrink-0">
+            <div className="relative aspect-3/4 w-full rounded-sm overflow-hidden mb-8">
+              <Image
+                src="/images/instructor.jpg"
+                alt="増本 藍"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h2 className="font-serif text-3xl font-medium text-stone-800 mb-2 tracking-wide">
+                増本 藍
+              </h2>
+              <p className="font-sans text-stone-400 text-sm tracking-widest uppercase mb-8">
+                Ai Masumoto
+              </p>
+            </div>
           </div>
-          <div className="w-full md:w-2/3">
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-6 tracking-wide border-b border-stone-200 pb-4">
-              増本 藍 <span className="text-xl text-stone-500 ml-2 font-light">Ai Masumoto</span>
-            </h2>
+
+          <div className="w-full md:w-7/12">
             
-            <div className="text-stone-700 font-sans leading-loose text-sm md:text-base space-y-6">
-              <p>
+            <div className="text-stone-600 font-sans leading-loose text-sm md:text-base space-y-8">
+              <p className="first-letter:text-3xl first-letter:font-serif first-letter:text-stone-800 first-letter:mr-2">
                 福岡県小郡市出身。<br />
                 久留米市立南筑高等学校入学後にバレエと声楽を始め、1998年10月に劇団四季へ入団。
                 初舞台である『美女と野獣』をはじめ、退団する2015年までの17年間にわたり数多くの名作ミュージカルに出演し、主要キャストとして活躍。
               </p>
               
-              <div className="bg-stone-100 p-6 rounded-sm mt-6 mb-8">
-                <h3 className="font-serif text-stone-800 font-medium mb-4 tracking-widest">主な出演作品・役柄</h3>
-                <ul className="list-disc list-inside space-y-2 text-stone-600">
-                  <li>『キャッツ』 - ディミータ役、ボンバルリーナ役</li>
-                  <li>『クレイジー・フォー・ユー』 - テス役、アイリーン役</li>
-                  <li>『コーラスライン』 - シーラ役</li>
-                  <li>『ウエストサイド物語』 - アニタ役</li>
-                  <li>『マンマ・ミーア！』 - ターニャ役</li>
-                  <li>『リトルマーメイド』 - アースラ役</li>
-                  <li>『ユタと不思議な仲間たち』 - ダンジャ役</li>
-                  <li>『鹿鳴館』</li>
-                  <li>『ふたりのロッテ』</li>
+              <div className="py-8 my-8 border-y border-stone-200">
+                <h3 className="font-sans text-stone-400 text-xs tracking-[0.2em] uppercase mb-6">Selected Works</h3>
+                <ul className="space-y-4 text-stone-800 font-serif leading-relaxed">
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『キャッツ』<br/><span className="text-stone-500 font-sans text-sm">ディミータ役 / ボンバルリーナ役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『クレイジー・フォー・ユー』<br/><span className="text-stone-500 font-sans text-sm">テス役 / アイリーン役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『コーラスライン』<span className="text-stone-500 font-sans text-sm ml-3">シーラ役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『ウエストサイド物語』<span className="text-stone-500 font-sans text-sm ml-3">アニタ役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『マンマ・ミーア！』<span className="text-stone-500 font-sans text-sm ml-3">ターニャ役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『リトルマーメイド』<span className="text-stone-500 font-sans text-sm ml-3">アースラ役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『ユタと不思議な仲間たち』<span className="text-stone-500 font-sans text-sm ml-3">ダンジャ役</span></span></li>
+                  <li className="flex gap-4"><span className="text-stone-300">-</span><span>『鹿鳴館』 / 『ふたりのロッテ』</span></li>
                 </ul>
               </div>
 
