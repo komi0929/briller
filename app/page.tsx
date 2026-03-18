@@ -144,43 +144,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Performances Section (Horizontal Scroll) */}
-      <section className="pt-24 pb-16 pl-6 md:pl-12 lg:pl-24 overflow-hidden border-b border-stone-200">
-        <div className="flex flex-col md:flex-row md:items-end justify-between pr-6 md:pr-12 lg:pr-24 mb-12 gap-6">
-          <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 mb-2 tracking-wider">
-              出演記録・公演実績
-            </h2>
-            <p className="font-sans text-stone-500 text-sm tracking-wide">
-              これまでに開催した発表会や、参加した外部イベントの記憶。
+      {/* Performances Section (Asymmetrical Grid Gallery) */}
+      <section className="py-24 bg-stone-900 text-stone-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div>
+              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-2 uppercase">
+                Gallery
+              </p>
+              <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-wider mb-2">
+                出演記録・公演実績
+              </h2>
+            </div>
+            <p className="font-sans text-stone-400 text-sm tracking-wide max-w-md leading-relaxed border-l border-stone-700 pl-4">
+              スクール生たちが輝く瞬間。<br/>
+              これまでに開催した発表会や、参加したイベントの記憶を切り取りました。
             </p>
           </div>
-        </div>
-        
-        <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-          {[
-            { year: "2023", title: "ミュージカル公演「The Shining Stars」", img: "/images/poster.jpg" },
-            { year: "2022", title: "サマーコンサート「Melody of Dreams」", img: "/images/poster.jpg" },
-            { year: "2021", title: "スタジオパフォーマンス「First Step」", img: "/images/poster.jpg" },
-            { year: "2020", title: "プレ公演「Overture」", img: "/images/poster.jpg" }
-          ].map((perf, i) => (
-            <div 
-              key={i} 
-              className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer"
-              onClick={() => setSelectedImage(perf.img)}
-            >
-              <div className="relative aspect-3/4 w-full mb-6 overflow-hidden rounded-sm transition-transform duration-500 group-hover:scale-[1.02]">
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 auto-rows-[150px] md:auto-rows-[200px]">
+            {[
+              { year: "2025", title: "春の特別公演", img: "/images/poster.jpg", span: "col-span-2 row-span-2" },
+              { year: "2024", title: "Winter Dance", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
+              { year: "2024", title: "Autumn Festival", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
+              { year: "2023", title: "The Shining Stars", img: "/images/practice.jpg", span: "col-span-2 md:col-span-1 row-span-2" },
+              { year: "2023", title: "Summer Concert", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
+              { year: "2022", title: "Melody of Dreams", img: "/images/practice.jpg", span: "col-span-2 md:col-span-2 lg:col-span-3 row-span-1" },
+              { year: "2022", title: "First Step", img: "/images/poster.jpg", span: "col-span-1 row-span-1" },
+              { year: "2021", title: "Overture", img: "/images/poster.jpg", span: "col-span-1 lg:col-span-2 row-span-1" },
+              { year: "2020", title: "Studio Live", img: "/images/practice.jpg", span: "col-span-1 row-span-1" },
+              { year: "2019", title: "プレ公演", img: "/images/poster.jpg", span: "col-span-1 row-span-1" }
+            ].map((perf, i) => (
+              <div 
+                key={i} 
+                className={`relative group cursor-pointer overflow-hidden rounded-sm bg-stone-800 ${perf.span}`}
+                onClick={() => setSelectedImage(perf.img)}
+              >
                 <Image
                   src={perf.img}
                   alt={perf.title}
                   fill
-                  className="object-cover transition-all duration-700"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 p-4 md:p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <p className="text-stone-300 text-xs tracking-[0.2em] font-sans mb-1">{perf.year}</p>
+                  <h3 className="font-serif text-stone-50 text-sm md:text-lg tracking-wide">{perf.title}</h3>
+                </div>
               </div>
-              <div className="text-stone-500 text-xs tracking-widest font-sans mb-1">{perf.year}</div>
-              <h3 className="font-serif text-stone-800 text-base md:text-lg">{perf.title}</h3>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
