@@ -73,7 +73,7 @@ export default function Home() {
               <Link href="/lessons" className="text-stone-500 hover:text-stone-800 transition-colors font-sans text-xs tracking-[0.15em] uppercase hidden sm:block">Lessons</Link>
               <Link href="/instructor" className="text-stone-500 hover:text-stone-800 transition-colors font-sans text-xs tracking-[0.15em] uppercase hidden sm:block">Instructor</Link>
               <Link href="/events" className="text-stone-500 hover:text-stone-800 transition-colors font-sans text-xs tracking-[0.15em] uppercase hidden sm:block">Events</Link>
-              <a href="#" className="bg-[#06C755] text-white px-4 py-1.5 rounded-full font-sans text-xs tracking-wider flex items-center gap-1.5 hover:opacity-90 transition-opacity">
+              <a href="https://line.me/R/ti/p/@351lwjgj?oat_content=url&ts=02242144" target="_blank" rel="noopener noreferrer" className="bg-[#06C755] text-white px-4 py-1.5 rounded-full font-sans text-xs tracking-wider flex items-center gap-1.5 hover:opacity-90 transition-opacity">
                 <LineIcon size={14} /> LINE
               </a>
             </div>
@@ -363,11 +363,22 @@ export default function Home() {
             どんな些細なことでも、お気軽にご相談ください。
           </p>
           <a 
-            href="#"
+            href="https://line.me/R/ti/p/@351lwjgj?oat_content=url&ts=02242144"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white px-10 py-4 rounded-full hover:opacity-90 transition-opacity font-sans font-medium tracking-wide text-sm"
           >
             <LineIcon size={20} />
             公式LINEで相談する
+          </a>
+          <a 
+            href="https://www.instagram.com/briller_2408/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 border border-stone-300 text-stone-600 px-10 py-4 rounded-full hover:bg-stone-100 transition-colors font-sans font-medium tracking-wide text-sm mt-4"
+          >
+            <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagramを見る
           </a>
         </FadeUp>
         <div className="mt-20 pt-8 border-t border-stone-200">
