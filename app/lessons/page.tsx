@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MoveLeft, MapPin, Clock, CreditCard, Sparkles } from "lucide-react";
+import { MoveLeft } from "lucide-react";
 
 export default function LessonsPage() {
   return (
@@ -20,8 +20,8 @@ export default function LessonsPage() {
           
           {/* コース案内 */}
           <section className="bg-white p-8 md:p-10 rounded-sm shadow-sm border border-stone-100 col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="text-stone-400" size={24} />
+            <div className="mb-8 border-l-2 border-stone-800 pl-4">
+              <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Courses</p>
               <h2 className="font-serif text-2xl font-medium text-stone-800 tracking-wider">コース案内</h2>
             </div>
             <div className="space-y-8">
@@ -48,8 +48,8 @@ export default function LessonsPage() {
 
           {/* 頻度・スケジュール */}
           <section className="bg-white p-8 md:p-10 rounded-sm shadow-sm border border-stone-100">
-            <div className="flex items-center gap-3 mb-6">
-              <Clock className="text-stone-400" size={24} />
+            <div className="mb-8 border-l-2 border-stone-800 pl-4">
+              <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Schedule</p>
               <h2 className="font-serif text-2xl font-medium text-stone-800 tracking-wider">スケジュール</h2>
             </div>
             <div className="text-stone-600 font-sans space-y-4 text-sm leading-relaxed">
@@ -68,8 +68,8 @@ export default function LessonsPage() {
 
           {/* 費用・料金 */}
           <section className="bg-white p-8 md:p-10 rounded-sm shadow-sm border border-stone-100">
-            <div className="flex items-center gap-3 mb-6">
-              <CreditCard className="text-stone-400" size={24} />
+            <div className="mb-8 border-l-2 border-stone-800 pl-4">
+              <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Pricing</p>
               <h2 className="font-serif text-2xl font-medium text-stone-800 tracking-wider">費用のご案内</h2>
             </div>
             <div className="text-stone-600 font-sans space-y-4 text-sm leading-relaxed">
@@ -97,8 +97,8 @@ export default function LessonsPage() {
 
           {/* 場所・アクセス */}
           <section className="bg-stone-800 text-stone-50 p-8 md:p-10 rounded-sm shadow-md col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <MapPin className="text-stone-300" size={24} />
+            <div className="mb-8 border-l-2 border-stone-400 pl-4">
+              <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Access</p>
               <h2 className="font-serif text-2xl font-medium tracking-wider">スタジオ・アクセス</h2>
             </div>
             <div className="font-sans space-y-4 text-sm leading-relaxed text-stone-300">

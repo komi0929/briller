@@ -187,7 +187,7 @@ export default function Home() {
       {/* Image Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-stone-900/70 p-4 sm:p-8 backdrop-blur-[4px] transition-all duration-300"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-stone-900/70 p-4 sm:p-8 backdrop-blur-xs transition-all duration-300"
           onClick={() => setSelectedImage(null)}
         >
           <button 
