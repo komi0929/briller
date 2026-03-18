@@ -53,7 +53,7 @@ export default function Home() {
 
         {/* Lesson CTA Block */}
         <div className="bg-white border border-stone-200 p-8 md:p-12 shadow-sm inline-block max-w-2xl w-full text-center">
-          <div className="relative w-16 h-16 mx-auto mb-6 rounded-full overflow-hidden shadow-sm">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full overflow-hidden shadow-lg border-4 border-white">
             <Image 
               src="/images/practice.jpg" 
               alt="レッスンの様子" 
@@ -187,11 +187,11 @@ export default function Home() {
       {/* Image Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8 backdrop-blur-sm transition-opacity duration-300"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-stone-900/70 p-4 sm:p-8 backdrop-blur-[4px] transition-all duration-300"
           onClick={() => setSelectedImage(null)}
         >
           <button 
-            className="absolute top-6 right-6 text-white hover:text-stone-300 transition-colors bg-black/50 rounded-full p-2"
+            className="absolute top-6 right-6 text-white hover:text-stone-300 transition-colors bg-black/40 rounded-full p-2"
             onClick={(e) => {
               e.stopPropagation();
               setSelectedImage(null);
@@ -200,14 +200,14 @@ export default function Home() {
             <X size={28} />
           </button>
           <div 
-            className="relative w-full max-w-5xl h-[80vh] rounded-sm overflow-hidden"
+            className="relative w-[85vw] md:w-[80vw] h-[80vh] max-w-6xl shadow-2xl animate-in fade-in zoom-in-[0.98] duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={selectedImage}
               alt="拡大画像"
               fill
-              className="object-contain"
+              className="object-contain drop-shadow-2xl"
             />
           </div>
         </div>
