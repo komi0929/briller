@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero.png"
+            src="/images/hero.jpg"
             alt="舞台のイメージ"
             fill
             className="object-cover opacity-80"
@@ -66,9 +66,9 @@ export default function Home() {
       {/* Instructor Section */}
       <section className="py-24 bg-stone-200/50 px-6 md:px-12">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          <div className="w-full md:w-1/2 relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl">
+          <div className="w-full md:w-1/2 relative aspect-3/4 rounded-sm overflow-hidden shadow-xl">
             <Image
-              src="/images/instructor.png"
+              src="/images/instructor.jpg"
               alt="増本 藍"
               fill
               className="object-cover"
@@ -107,15 +107,15 @@ export default function Home() {
         </p>
         <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {[
-            { tag: "キッズクラス", title: "基礎発声とリズム遊び" },
-            { tag: "一般クラス", title: "グループでの歌唱指導" },
-            { tag: "特別レッスン", title: "プロ向けオーディション対策" },
-            { tag: "キッズクラス", title: "はじめてのダンスポーズ" }
+            { tag: "キッズクラス", title: "基礎発声とリズム遊び", img: "/images/practice.jpg" },
+            { tag: "一般クラス", title: "グループでの歌唱指導", img: "/images/practice2.jpg" },
+            { tag: "特別レッスン", title: "プロ向けオーディション対策", img: "/images/practice.jpg" },
+            { tag: "キッズクラス", title: "はじめてのダンスポーズ", img: "/images/practice2.jpg" }
           ].map((scene, i) => (
-            <div key={i} className="min-w-[280px] sm:min-w-[320px] snap-center flex-shrink-0 group">
-              <div className="relative aspect-[4/3] w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:opacity-90">
+            <div key={i} className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group">
+              <div className="relative aspect-4/3 w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:opacity-90">
                 <Image
-                  src="/images/poster.png"
+                  src={scene.img}
                   alt={scene.title}
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
@@ -148,10 +148,10 @@ export default function Home() {
             { year: "2021", title: "スタジオパフォーマンス「First Step」" },
             { year: "2020", title: "プレ公演「Overture」" }
           ].map((perf, i) => (
-            <div key={i} className="min-w-[280px] sm:min-w-[320px] snap-center flex-shrink-0 group cursor-pointer">
-              <div className="relative aspect-[3/4] w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
+            <div key={i} className="min-w-[280px] sm:min-w-[320px] snap-center shrink-0 group cursor-pointer">
+              <div className="relative aspect-3/4 w-full mb-4 overflow-hidden rounded-sm shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
                 <Image
-                  src="/images/poster.png"
+                  src="/images/poster.jpg"
                   alt={perf.title}
                   fill
                   className="object-cover"

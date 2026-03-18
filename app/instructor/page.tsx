@@ -18,9 +18,9 @@ export default function InstructorPage() {
         </h1>
 
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 mb-24">
-          <div className="w-full md:w-1/3 relative aspect-[3/4] rounded-sm overflow-hidden shadow-lg h-fit">
+          <div className="w-full md:w-1/3 relative aspect-3/4 rounded-sm overflow-hidden shadow-lg h-fit">
             <Image
-              src="/images/instructor.png"
+              src="/images/instructor.jpg"
               alt="増本 藍"
               fill
               className="object-cover"
