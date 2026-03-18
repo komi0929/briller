@@ -146,8 +146,7 @@ export default function Home() {
             <h3 className="font-serif text-xl md:text-2xl font-medium text-stone-800 tracking-wider mb-4">レッスンについて</h3>
             <p className="font-sans text-stone-400 text-xs tracking-[0.15em] mb-3 uppercase">Lesson Details</p>
             <p className="font-sans text-stone-500 text-sm mb-10 leading-relaxed max-w-md mx-auto">
-              初めての方向けのキッズクラスから、プロを目指す実践的な指導まで。<br/>
-              場所、費用、各クラスのご案内をまとめています。
+              小学生から始めるミュージカルスクール、初心者から舞台を目指す方まで、表現力と自信を育てるレッスンです。
             </p>
             <Link 
               href="/lessons"
