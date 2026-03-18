@@ -98,7 +98,7 @@ export default function Home() {
             briller
           </h1>
           <p className="font-sans text-xs md:text-sm tracking-[0.4em] font-light mt-8 hero-subtitle uppercase">
-            <span className="hidden md:inline">Musical School — </span>本物を知る、洗練されたミュージカルスクール
+            <span className="hidden md:inline">Musical School — </span>本物を知る。子どもが輝くミュージカルスクール。
           </p>
         </div>
         {/* Scroll indicator */}
