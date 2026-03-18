@@ -60,26 +60,35 @@ export default function LessonsPage() {
               <p className="text-stone-400 font-sans text-xs tracking-[0.2em] mb-1 uppercase">Pricing</p>
               <h2 className="font-serif text-2xl font-medium text-stone-800 tracking-wider">費用のご案内</h2>
             </div>
-            <div className="text-stone-600 font-sans space-y-4 text-sm leading-relaxed">
-              <ul className="space-y-4">
-                <li className="flex justify-between border-b border-stone-100 pb-2">
-                  <span className="font-medium text-stone-800">入会金</span>
-                  <span>10,000円</span>
-                </li>
-                <li className="flex justify-between border-b border-stone-100 pb-2">
-                  <span className="font-medium text-stone-800">キッズクラス (月謝)</span>
-                  <span>8,000円 / 月</span>
-                </li>
-                <li className="flex justify-between border-b border-stone-100 pb-2">
-                  <span className="font-medium text-stone-800">一般クラス (月謝)</span>
-                  <span>10,000円 / 月</span>
-                </li>
-                <li className="flex justify-between border-b border-stone-100 pb-2">
-                  <span className="font-medium text-stone-800">体験レッスン</span>
-                  <span>2,000円 (1回限り)</span>
-                </li>
-              </ul>
-              <p className="text-xs text-stone-400 mt-6">※ 発表会等の出演にあたっては、別途参加費・衣装代がかかる場合がございます。<br/>※ 料金はすべて税込価格の目安です。</p>
+            <div className="text-stone-600 font-sans space-y-6 text-sm leading-relaxed">
+              {/* 入会金 */}
+              <div className="border-b border-stone-100 pb-4">
+                <h3 className="font-medium text-stone-800 mb-2">◾ 入会金</h3>
+                <p className="pl-4">5,500円</p>
+              </div>
+              {/* 月謝 */}
+              <div className="border-b border-stone-100 pb-4">
+                <h3 className="font-medium text-stone-800 mb-2">◾ 月謝</h3>
+                <ul className="pl-4 space-y-2">
+                  <li className="flex justify-between"><span>週1回</span><span>11,000円</span></li>
+                  <li>
+                    <div className="flex justify-between"><span>週2回</span></div>
+                    <ul className="pl-4 mt-1 space-y-1 text-stone-500">
+                      <li className="flex justify-between"><span>小学1年〜3年</span><span>16,000円</span></li>
+                      <li className="flex justify-between"><span>小学4年生以上</span><span>18,000円</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              {/* 体験レッスン */}
+              <div className="border-b border-stone-100 pb-4">
+                <h3 className="font-medium text-stone-800 mb-2">◾ 体験レッスン</h3>
+                <ul className="pl-4 space-y-2">
+                  <li className="flex justify-between"><span>小学生</span><span>1,000円</span></li>
+                  <li className="flex justify-between"><span>中学生以上</span><span>1,500円</span></li>
+                </ul>
+              </div>
+              <p className="text-xs text-stone-400">※ 全て税込価格です。<br/>※ 発表会等の出演にあたっては、別途参加費・衣装代がかかる場合がございます。</p>
             </div>
           </section>
 
