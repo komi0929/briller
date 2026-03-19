@@ -74,6 +74,69 @@ export default function InstructorPage() {
             </div>
           </div>
         </div>
+
+        {/* 特別講師セクション */}
+        <div className="mt-32 mb-24 border-t border-stone-200 pt-24">
+          <div className="mb-16 text-center md:text-left">
+            <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-2 uppercase">
+              Special Instructor
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 tracking-wider">
+              特別講師
+            </h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24">
+            <div className="w-full md:w-5/12 shrink-0">
+              <div className="relative aspect-3/4 w-full rounded-sm overflow-hidden mb-8">
+                <Image
+                  src="/images/special-instructor.png"
+                  alt="AMI（森亜沙美）"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="font-serif text-3xl font-medium text-stone-800 mb-2 tracking-wide">
+                  AMI
+                </h3>
+                <p className="font-sans text-stone-500 text-sm mb-1">森 亜沙美</p>
+                <p className="font-sans text-stone-400 text-sm tracking-widest uppercase mb-8">
+                  Asami Mori
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full md:w-7/12">
+              <div className="text-stone-600 font-sans leading-loose text-sm md:text-base space-y-8">
+                <p className="first-letter:text-3xl first-letter:font-serif first-letter:text-stone-800 first-letter:mr-2">
+                  幼少よりクラシックバレエを始め、数々のコンクールで入賞。<br />
+                  その後、ジャズダンス・コンテンポラリーへと表現の幅を広げ、国内外の舞台やイベントで活躍。
+                </p>
+
+                <div className="py-8 my-8 border-y border-stone-200">
+                  <h4 className="font-sans text-stone-400 text-xs tracking-[0.2em] uppercase mb-6">Profile</h4>
+                  <ul className="space-y-4 text-stone-800 font-serif leading-relaxed">
+                    <li className="flex gap-4"><span className="text-stone-300">-</span><span>テーマパークダンサーとして多数のショーに出演</span></li>
+                    <li className="flex gap-4"><span className="text-stone-300">-</span><span>アーティストバックダンサー・振付アシスタント経験</span></li>
+                    <li className="flex gap-4"><span className="text-stone-300">-</span><span>ミュージカル・舞台作品への出演多数</span></li>
+                    <li className="flex gap-4"><span className="text-stone-300">-</span><span>ダンスインストラクターとして10年以上の指導歴</span></li>
+                  </ul>
+                </div>
+
+                <p>
+                  現在は福岡を拠点に、ジャズダンス・バレエ・シアターダンスの指導を行う。
+                  Musical School brillerでは特別講師として、主にダンステクニックと身体表現の指導を担当。
+                </p>
+                <p>
+                  「踊ることは、自分を知ること。身体を通じた表現の楽しさを伝えたい」という信念のもと、
+                  生徒一人ひとりの個性を大切にしながら、基礎から丁寧に指導している。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -140,7 +140,7 @@ export default function Home() {
                 src="/images/gallery/レッスン.jpg" 
                 alt="レッスンの様子" 
                 fill 
-                className="object-cover object-[center_20%]"
+                className="object-cover object-[center_35%]"
               />
             </div>
             <h3 className="font-serif text-xl md:text-2xl font-medium text-stone-800 tracking-wider mb-4">レッスンについて</h3>
@@ -208,10 +208,10 @@ export default function Home() {
         </FadeUp>
         <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {[
-            { tag: "キッズクラス", title: "基礎発声とリズム遊び", img: "/images/gallery/練習1.jpg" },
-            { tag: "一般クラス", title: "グループでの歌唱指導", img: "/images/gallery/練習2.jpg" },
-            { tag: "特別レッスン", title: "プロ向けオーディション対策", img: "/images/gallery/練習3.jpg" },
-            { tag: "キッズクラス", title: "はじめてのダンスポーズ", img: "/images/gallery/練習1.jpg" }
+            { tag: "Dance", title: "ダンスレッスン", img: "/images/gallery/練習1.jpg" },
+            { tag: "Vocal & Acting", title: "歌・演技レッスン", img: "/images/gallery/練習2.jpg" },
+            { tag: "Song & Dance", title: "Song＆Danceレッスン", img: "/images/gallery/練習3.jpg" },
+            { tag: "Private", title: "個人レッスン", img: "/images/gallery/練習1.jpg" }
           ].map((scene, i) => (
             <div 
               key={i} 

@@ -28,7 +28,7 @@ export default function LessonsPage() {
                 <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">ダンスレッスン</h3>
                 <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">火曜　17:40〜19:10</p>
                 <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">本気で楽しむ、ミュージカルダンス。</p>
-                <p className="text-stone-600 font-sans text-sm leading-[2]">
+                <p className="text-stone-600 font-sans text-sm leading-loose">
                   基礎から身体づくりを行い、柔軟性・持久力・リズム感を育てます。<br/>
                   初心者から経験者まで、技術と表現力をしっかり伸ばします。
                 </p>
@@ -37,7 +37,7 @@ export default function LessonsPage() {
                 <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">歌・演技レッスン</h3>
                 <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">木曜　18:00〜19:30</p>
                 <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">感じて、考えて、表現する。</p>
-                <p className="text-stone-600 font-sans text-sm leading-[2]">
+                <p className="text-stone-600 font-sans text-sm leading-loose">
                   基礎を大切にしながら、想像力と表現力を育てます。<br/>
                   自ら発想し、行動する力を養い、自己表現へと繋げていきます。
                 </p>
@@ -46,7 +46,7 @@ export default function LessonsPage() {
                 <h3 className="font-serif text-lg text-stone-800 mb-1 border-b border-stone-100 pb-2">Song＆Danceレッスン<span className="text-stone-400 font-sans text-xs ml-2">小学5年生以上</span></h3>
                 <p className="text-stone-400 font-sans text-xs tracking-widest mb-3">日曜　11:00〜12:30</p>
                 <p className="text-stone-700 font-serif text-sm italic mb-3 leading-relaxed">歌って、踊って、魅せる。</p>
-                <p className="text-stone-600 font-sans text-sm leading-[2]">
+                <p className="text-stone-600 font-sans text-sm leading-loose">
                   ミュージカル曲を用い、歌とダンスを総合的に学びます。<br/>
                   舞台で通用する身体づくりと表現力を身につけていきます。
                 </p>
