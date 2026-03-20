@@ -160,38 +160,84 @@ export default function Home() {
 
       {/* Instructor Section */}
       <section className="py-32 bg-stone-100/60 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
-          <FadeUp className="w-full md:w-5/12">
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden">
-              <Image
-                src="/images/instructor.jpg"
-                alt="増本 藍"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </FadeUp>
-          <FadeUp delay={1} className="w-full md:w-7/12">
-            <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3 uppercase">Instructor</p>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-3 tracking-wide">
-              増本 藍
-            </h2>
-            <p className="text-stone-400 font-sans text-sm tracking-widest uppercase mb-8">Ai Masumoto</p>
-            <div className="text-stone-500 font-sans leading-[2.2] text-sm md:text-base space-y-6 mb-10">
-              <p className="text-stone-700 font-serif text-base md:text-lg italic leading-relaxed border-l-2 border-stone-300 pl-6">
-                「本物の舞台芸術に触れる経験を通じて、<br className="hidden md:block"/>表現する喜びを深く知ってほしい」
-              </p>
-              <p>
-                劇団四季に17年間在籍し、『キャッツ』や『クレイジー・フォー・ユー』など数多くの名作に出演。退団後は福岡を拠点に後進の育成に尽力。
-              </p>
-            </div>
-            <Link 
-              href="/instructor"
-              className="inline-flex items-center gap-3 text-stone-800 font-sans text-xs tracking-[0.15em] uppercase hover:text-stone-500 transition-colors border-b border-stone-300 hover:border-stone-500 pb-2"
-            >
-              過去の詳しい出演歴・プロフィールへ <span className="text-base leading-none">→</span>
-            </Link>
-          </FadeUp>
+        <div className="max-w-5xl mx-auto">
+          {/* Main Instructor */}
+          <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+            <FadeUp className="w-full md:w-5/12">
+              <div className="relative aspect-3/4 rounded-sm overflow-hidden">
+                <Image
+                  src="/images/instructor.jpg"
+                  alt="増本 藍"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </FadeUp>
+            <FadeUp delay={1} className="w-full md:w-7/12">
+              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3 uppercase">Instructor</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-3 tracking-wide">
+                増本 藍
+              </h2>
+              <p className="text-stone-400 font-sans text-sm tracking-widest uppercase mb-8">Ai Masumoto</p>
+              <div className="text-stone-500 font-sans leading-[2.2] text-sm md:text-base space-y-6 mb-10">
+                <p className="text-stone-700 font-serif text-base md:text-lg italic leading-relaxed border-l-2 border-stone-300 pl-6">
+                  「本物の舞台芸術に触れる経験を通じて、<br className="hidden md:block"/>表現する喜びを深く知ってほしい」
+                </p>
+                <p>
+                  劇団四季に17年間在籍し、『キャッツ』や『クレイジー・フォー・ユー』など数多くの名作に出演。退団後は福岡を拠点に後進の育成に尽力。
+                </p>
+              </div>
+              <Link 
+                href="/instructor"
+                className="inline-flex items-center gap-3 text-stone-800 font-sans text-xs tracking-[0.15em] uppercase hover:text-stone-500 transition-colors border-b border-stone-300 hover:border-stone-500 pb-2"
+              >
+                過去の詳しい出演歴・プロフィールへ <span className="text-base leading-none">→</span>
+              </Link>
+            </FadeUp>
+          </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-6 my-20">
+            <div className="flex-1 h-px bg-stone-200" />
+            <span className="font-sans text-stone-300 text-xs tracking-[0.3em] uppercase">✦</span>
+            <div className="flex-1 h-px bg-stone-200" />
+          </div>
+
+          {/* Special Instructor */}
+          <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+            <FadeUp className="w-full md:w-5/12">
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden">
+                <Image
+                  src="/images/special-instructor.png"
+                  alt="AMI（森亜沙美）"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </FadeUp>
+            <FadeUp delay={1} className="w-full md:w-7/12">
+              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3 uppercase">Special Instructor</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-3 tracking-wide">
+                AMI
+              </h2>
+              <p className="text-stone-500 font-sans text-sm mb-1">森 亜沙美</p>
+              <p className="text-stone-400 font-sans text-sm tracking-widest uppercase mb-8">Asami Mori</p>
+              <div className="text-stone-500 font-sans leading-[2.2] text-sm md:text-base space-y-6 mb-10">
+                <p className="text-stone-700 font-serif text-base md:text-lg italic leading-relaxed border-l-2 border-stone-300 pl-6">
+                  「踊ることは、自分を知ること。<br className="hidden md:block"/>身体を通じた表現の楽しさを伝えたい」
+                </p>
+                <p>
+                  テーマパークダンサーやバックダンサーとして第一線で活躍後、福岡を拠点にダンス指導に情熱を注ぐ。brillerでは主にダンステクニックと身体表現を担当。
+                </p>
+              </div>
+              <Link 
+                href="/instructor"
+                className="inline-flex items-center gap-3 text-stone-800 font-sans text-xs tracking-[0.15em] uppercase hover:text-stone-500 transition-colors border-b border-stone-300 hover:border-stone-500 pb-2"
+              >
+                詳しいプロフィールへ <span className="text-base leading-none">→</span>
+              </Link>
+            </FadeUp>
+          </div>
         </div>
       </section>
 
