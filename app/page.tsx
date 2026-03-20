@@ -82,7 +82,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section — Cinematic Entrance */}
-      <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero.jpg"
@@ -206,7 +206,7 @@ export default function Home() {
           {/* Special Instructor */}
           <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
             <FadeUp className="w-full md:w-5/12">
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden">
+              <div className="relative aspect-3/4 rounded-sm overflow-hidden">
                 <Image
                   src="/images/special-instructor.png"
                   alt="AMI（森亜沙美）"
@@ -292,7 +292,7 @@ export default function Home() {
                   出演記録・<br className="md:hidden"/>公演実績
                 </h2>
               </div>
-              <p className="font-sans text-stone-500 text-sm tracking-wide max-w-sm leading-[2] border-l border-stone-700 pl-6">
+              <p className="font-sans text-stone-500 text-sm tracking-wide max-w-sm leading-loose border-l border-stone-700 pl-6">
                 スクール生たちが輝く瞬間。<br/>
                 これまでに開催した発表会や、参加したイベントの記憶を切り取りました。
               </p>
@@ -384,7 +384,7 @@ export default function Home() {
           <h2 className="font-serif text-2xl md:text-4xl font-medium text-stone-100 mb-8 tracking-wider leading-relaxed">
             舞台で輝く、次の主役たち。
           </h2>
-          <p className="text-stone-400 font-sans mb-12 text-sm md:text-base max-w-xl mx-auto leading-[2]">
+          <p className="text-stone-400 font-sans mb-12 text-sm md:text-base max-w-xl mx-auto leading-loose">
             まもなく開催される公開レッスンやコンサートなどをご紹介します。<br/>
             生でしか味わえない感動を、ぜひ劇場で体感してください。
           </p>
@@ -404,7 +404,7 @@ export default function Home() {
           <h2 className="font-serif text-xl md:text-3xl font-medium text-stone-800 mb-6 tracking-wider">
             お問い合わせ・体験レッスン
           </h2>
-          <p className="text-stone-400 text-sm mb-12 font-sans max-w-md mx-auto leading-[2]">
+          <p className="text-stone-400 text-sm mb-12 font-sans max-w-md mx-auto leading-loose">
             スクールに関する詳細なご案内や、体験レッスンのお申し込みは<br className="hidden md:block"/>公式LINEにて受け付けております。<br/>
             どんな些細なことでも、お気軽にご相談ください。
           </p>
