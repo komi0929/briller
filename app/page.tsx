@@ -174,7 +174,7 @@ export default function Home() {
               </div>
             </FadeUp>
             <FadeUp delay={1} className="w-full md:w-7/12">
-              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3 uppercase">Instructor</p>
+              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3">講師</p>
               <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-3 tracking-wide">
                 増本 藍
               </h2>
@@ -216,7 +216,7 @@ export default function Home() {
               </div>
             </FadeUp>
             <FadeUp delay={1} className="w-full md:w-7/12">
-              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3 uppercase">Special Instructor</p>
+              <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3">特別講師</p>
               <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-3 tracking-wide">
                 AMI
               </h2>
@@ -230,12 +230,6 @@ export default function Home() {
                   テーマパークダンサーやバックダンサーとして第一線で活躍後、福岡を拠点にダンス指導に情熱を注ぐ。brillerでは主にダンステクニックと身体表現を担当。
                 </p>
               </div>
-              <Link 
-                href="/instructor"
-                className="inline-flex items-center gap-3 text-stone-800 font-sans text-xs tracking-[0.15em] uppercase hover:text-stone-500 transition-colors border-b border-stone-300 hover:border-stone-500 pb-2"
-              >
-                詳しいプロフィールへ <span className="text-base leading-none">→</span>
-              </Link>
             </FadeUp>
           </div>
         </div>
