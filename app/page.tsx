@@ -395,6 +395,35 @@ export default function Home() {
         </FadeUp>
       </section>
 
+      {/* Spring Campaign */}
+      <section className="py-24 px-6 bg-linear-to-b from-pink-50/60 via-stone-50 to-stone-50 overflow-hidden">
+        <FadeUp>
+          <div className="max-w-lg mx-auto text-center">
+            <p className="font-serif text-pink-400/80 text-xs tracking-[0.3em] mb-3 uppercase">Spring Campaign</p>
+            <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 mb-3 tracking-wider">
+              春の入会キャンペーン
+            </h2>
+            <p className="text-stone-400 font-sans text-sm mb-10 tracking-wide">3月の期間限定特典</p>
+            <div className="space-y-5 mb-12">
+              {[
+                "体験レッスン無料",
+                "入会金無料",
+                "初月月謝半額",
+              ].map((item, i) => (
+                <div key={i} className="flex items-center justify-center gap-4">
+                  <span className="text-pink-300 text-lg">♪</span>
+                  <span className="font-serif text-stone-700 text-base md:text-lg tracking-wider">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-stone-400 font-sans text-xs leading-relaxed">
+              この春、新しい一歩を踏み出すお子さまを応援します。<br/>
+              お気軽にお問い合わせください。
+            </p>
+          </div>
+        </FadeUp>
+      </section>
+
       {/* Footer / Official LINE Contact */}
       <footer className="py-32 px-6 text-center bg-stone-50">
         <FadeUp>

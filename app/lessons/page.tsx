@@ -106,6 +106,41 @@ export default function LessonsPage() {
           </section>
 
         </div>
+
+        {/* Spring Campaign */}
+        <section className="mb-20 py-16 px-6 bg-linear-to-b from-pink-50/60 via-stone-50 to-stone-50 rounded-sm text-center">
+          <p className="font-serif text-pink-400/80 text-xs tracking-[0.3em] mb-3 uppercase">Spring Campaign</p>
+          <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 mb-3 tracking-wider">
+            春の入会キャンペーン
+          </h2>
+          <p className="text-stone-400 font-sans text-sm mb-10 tracking-wide">3月の期間限定特典</p>
+          <div className="space-y-5 mb-12">
+            {[
+              "体験レッスン無料",
+              "入会金無料",
+              "初月月謝半額",
+            ].map((item, i) => (
+              <div key={i} className="flex items-center justify-center gap-4">
+                <span className="text-pink-300 text-lg">♪</span>
+                <span className="font-serif text-stone-700 text-base md:text-lg tracking-wider">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-stone-400 font-sans text-xs leading-relaxed mb-12">
+            この春、新しい一歩を踏み出すお子さまを応援します。<br/>
+            お気軽にお問い合わせください。
+          </p>
+          <a 
+            href="https://line.me/R/ti/p/@351lwjgj?oat_content=url&ts=02242144"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white px-10 py-4 rounded-full hover:opacity-90 transition-opacity font-sans font-medium tracking-wide text-sm"
+          >
+            <svg width={20} height={20} viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .349-.281.63-.63.63h-2.386a.63.63 0 0 1-.63-.63V8.108a.63.63 0 0 1 .63-.63h2.386c.349 0 .63.282.63.63 0 .349-.281.631-.63.631H17.61v1.125h1.755zm-3.855 3.016a.63.63 0 0 1-.63.63.629.629 0 0 1-.51-.262l-2.397-3.282v2.913a.63.63 0 0 1-1.26 0V8.108a.63.63 0 0 1 .63-.63c.2 0 .385.095.51.262l2.397 3.282V8.108a.63.63 0 0 1 1.26 0v4.771zm-5.741 0a.63.63 0 0 1-1.26 0V8.108a.63.63 0 0 1 1.26 0v4.771zm-2.462.63H4.921a.63.63 0 0 1-.63-.63V8.108a.63.63 0 0 1 1.261 0v4.14h1.756c.348 0 .629.283.629.631 0 .348-.281.63-.629.63zM24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.084.923.258 1.058.593.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967C23.309 14.09 24 12.315 24 10.314z" /></svg>
+            公式LINEで相談する
+          </a>
+        </section>
+
       </div>
     </div>
   );
