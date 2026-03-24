@@ -396,15 +396,15 @@ export default function Home() {
       </section>
 
       {/* Spring Campaign */}
-      <section className="py-24 px-6 bg-linear-to-b from-pink-50/60 via-stone-50 to-stone-50 overflow-hidden">
+      <section className="pt-16 pb-12 px-6 bg-linear-to-b from-pink-50/60 via-stone-50 to-stone-50 overflow-hidden">
         <FadeUp>
           <div className="max-w-lg mx-auto text-center">
             <p className="font-serif text-pink-400/80 text-xs tracking-[0.3em] mb-3 uppercase">Spring Campaign</p>
-            <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 mb-3 tracking-wider">
+            <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 mb-2 tracking-wider">
               春の入会キャンペーン
             </h2>
-            <p className="text-stone-400 font-sans text-sm mb-10 tracking-wide">3月の期間限定特典</p>
-            <div className="space-y-5 mb-12">
+            <p className="text-stone-400 font-sans text-sm mb-8 tracking-wide">3月の期間限定特典</p>
+            <div className="space-y-4 mb-8">
               {[
                 "体験レッスン無料",
                 "入会金無料",
@@ -425,7 +425,7 @@ export default function Home() {
       </section>
 
       {/* Footer / Official LINE Contact */}
-      <footer className="py-32 px-6 text-center bg-stone-50">
+      <footer className="pt-16 pb-24 px-6 text-center bg-stone-50">
         <FadeUp>
           <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-4 uppercase">Contact</p>
           <h2 className="font-serif text-xl md:text-3xl font-medium text-stone-800 mb-6 tracking-wider">
