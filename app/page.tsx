@@ -119,12 +119,12 @@ export default function Home() {
         <FadeUp delay={1}>
           <div className="text-stone-500 font-sans leading-[2.2] space-y-8 text-sm md:text-base mb-20 max-w-xl mx-auto">
             <p>
-              briller（ブリエ）は、第一線で活躍実績のある講師が直接指導を行う、<br className="hidden md:block" />
-              格式と温かみを兼ね備えたミュージカルスクールです。
+              briller（ブリエ）は、第一線で活躍実績のある講師が、<br className="hidden md:block" />
+              生徒一人ひとりと丁寧に向き合うミュージカルスクールです。
             </p>
             <p>
-              ただ技術を磨くだけではなく、豊かな感性と表現力を育み、<br className="hidden md:block" />
-              生徒一人ひとりが自らの力で「輝く（briller）」ためのサポートを行います。
+              技術だけでなく、豊かな感性と表現力を育てながら、<br className="hidden md:block" />
+              みんなの「輝き（briller）」を引き出していきます。
             </p>
             <p className="text-stone-400 text-xs tracking-widest">
               ── 確かな基礎と舞台の魔法を、ここで。
@@ -248,17 +248,17 @@ export default function Home() {
         </FadeUp>
         <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {[
-            { tag: "Dance", title: "ダンスレッスン", img: "/images/gallery/練習1.jpg" },
-            { tag: "Vocal & Acting", title: "歌・演技レッスン", img: "/images/gallery/練習2.jpg" },
-            { tag: "Song & Dance", title: "Song＆Danceレッスン", img: "/images/gallery/練習3.jpg" },
-            { tag: "Private", title: "個人レッスン", img: "/images/gallery/練習1.jpg" }
+            { title: "ダンスレッスン", img: "/images/gallery/練習1.jpg" },
+            { title: "歌・演技レッスン", img: "/images/gallery/練習2.jpg" },
+            { title: "Song＆Danceレッスン", img: "/images/gallery/練習3.jpg" },
+            { title: "個人レッスン", img: "/images/gallery/練習1.jpg" }
           ].map((scene, i) => (
             <div 
               key={i} 
               className="min-w-[280px] sm:min-w-[340px] snap-center shrink-0 group cursor-pointer"
               onClick={() => setSelectedImage({ img: scene.img, title: scene.title })}
             >
-              <div className="relative aspect-4/3 w-full mb-6 overflow-hidden rounded-sm">
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-sm">
                 <Image
                   src={scene.img}
                   alt={scene.title}
@@ -266,8 +266,6 @@ export default function Home() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
                 />
               </div>
-              <div className="text-stone-400 text-[10px] tracking-[0.2em] font-sans mb-2 uppercase">{scene.tag}</div>
-              <h3 className="font-serif text-stone-800 text-base md:text-lg tracking-wide">{scene.title}</h3>
             </div>
           ))}
         </div>
@@ -380,14 +378,16 @@ export default function Home() {
           </h2>
           <p className="text-stone-400 font-sans mb-12 text-sm md:text-base max-w-xl mx-auto leading-loose">
             まもなく開催される公開レッスンやコンサートなどをご紹介します。<br/>
-            生でしか味わえない感動を、ぜひ劇場で体感してください。
+            生でしか味わえない感動を、ぜひ体感してください。
           </p>
-          <Link 
-            href="/events"
-            className="inline-flex items-center gap-4 border border-stone-400 text-stone-200 px-10 py-4 rounded-sm hover:bg-stone-100 hover:text-stone-900 hover:border-stone-100 transition-all duration-300 font-sans text-sm tracking-widest uppercase"
+          <a 
+            href="https://www.instagram.com/briller_2408/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 border border-stone-400 text-stone-200 px-10 py-4 rounded-sm hover:bg-stone-100 hover:text-stone-900 hover:border-stone-100 transition-all duration-300 font-sans text-sm tracking-widest"
           >
-            今後のイベント・出演予定 <span className="text-lg leading-none">→</span>
-          </Link>
+            今後のイベントはInstagramにて <span className="text-lg leading-none">→</span>
+          </a>
         </FadeUp>
       </section>
 
