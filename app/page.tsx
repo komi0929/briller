@@ -196,14 +196,13 @@ export default function Home() {
             </FadeUp>
           </div>
 
-          {/* Divider */}
+          {/* Divider & Special Instructor — 一時非表示（将来再開用）
           <div className="flex items-center gap-6 my-20">
             <div className="flex-1 h-px bg-stone-200" />
             <span className="font-sans text-stone-300 text-xs tracking-[0.3em] uppercase">✦</span>
             <div className="flex-1 h-px bg-stone-200" />
           </div>
 
-          {/* Special Instructor */}
           <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
             <FadeUp className="w-full md:w-5/12">
               <div className="relative aspect-3/4 rounded-sm overflow-hidden">
@@ -232,6 +231,7 @@ export default function Home() {
               </div>
             </FadeUp>
           </div>
+          */}
         </div>
       </section>
 
@@ -248,10 +248,12 @@ export default function Home() {
         </FadeUp>
         <div className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 pr-6 md:pr-12 lg:pr-24 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {[
-            { title: "ダンスレッスン", img: "/images/gallery/練習1.jpg" },
-            { title: "歌・演技レッスン", img: "/images/gallery/練習2.jpg" },
-            { title: "Song＆Danceレッスン", img: "/images/gallery/練習3.jpg" },
-            { title: "個人レッスン", img: "/images/gallery/練習1.jpg" }
+            { title: "バランス練習", img: "/images/gallery/練習2-1.jpg" },
+            { title: "演技レッスン", img: "/images/gallery/練習2-2.jpg" },
+            { title: "歌のレッスン", img: "/images/gallery/練習2-3.jpg" },
+            { title: "ダンスレッスン", img: "/images/gallery/練習2-4.jpg" },
+            { title: "表現レッスン", img: "/images/gallery/練習2-5.jpg" },
+            { title: "基礎トレーニング", img: "/images/gallery/練習2-6.jpg" }
           ].map((scene, i) => (
             <div 
               key={i} 
@@ -314,11 +316,13 @@ export default function Home() {
                   fill
                   className="object-cover transition-all duration-700 md:group-hover:scale-110 md:opacity-90 md:group-hover:opacity-100"
                 />
+                {/* 年・タイトルオーバーレイ — 一時非表示（将来再開用）
                 <div className="absolute inset-0 bg-linear-to-t from-stone-900/80 via-transparent to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 p-4 md:p-6 translate-y-0 md:translate-y-3 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500">
                   <p className="text-stone-400 text-[10px] tracking-[0.25em] font-sans mb-1 uppercase">{perf.year}</p>
                   <h3 className="font-serif text-stone-50 text-sm md:text-lg tracking-wide">{perf.title}</h3>
                 </div>
+                */}
               </div>
             ))}
           </div>
