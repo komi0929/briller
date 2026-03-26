@@ -395,7 +395,7 @@ export default function Home() {
         </FadeUp>
       </section>
 
-      {/* Spring Campaign */}
+      {/* Spring Campaign — 一時非表示（将来再開用）
       <section className="pt-16 pb-12 px-6 bg-linear-to-b from-pink-50/60 via-stone-50 to-stone-50 overflow-hidden">
         <FadeUp>
           <div className="max-w-lg mx-auto text-center">
@@ -423,6 +423,7 @@ export default function Home() {
           </div>
         </FadeUp>
       </section>
+      */}
 
       {/* Footer / Official LINE Contact */}
       <footer className="pt-16 pb-24 px-6 text-center bg-stone-50">

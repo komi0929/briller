@@ -107,7 +107,7 @@ export default function LessonsPage() {
 
         </div>
 
-        {/* Spring Campaign */}
+        {/* Spring Campaign — 一時非表示（将来再開用）
         <section className="mb-20 py-16 px-6 bg-linear-to-b from-pink-50/60 via-stone-50 to-stone-50 rounded-sm text-center">
           <p className="font-serif text-pink-400/80 text-xs tracking-[0.3em] mb-3 uppercase">Spring Campaign</p>
           <h2 className="font-serif text-2xl md:text-3xl font-medium text-stone-800 mb-3 tracking-wider">
@@ -140,6 +140,7 @@ export default function LessonsPage() {
             公式LINEで相談する
           </a>
         </section>
+        */}
 
       </div>
     </div>
