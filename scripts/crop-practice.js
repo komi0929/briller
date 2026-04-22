@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs');
 
-const srcDir = path.join(__dirname, '..', 'uproad');
+const srcDir = path.join(__dirname, '..', 'upload');
 const outDir = path.join(__dirname, '..', 'public', 'images', 'gallery');
 
 // Target: 4:3 aspect, 1200px wide output

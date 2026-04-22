@@ -196,7 +196,7 @@ export default function Home() {
             </FadeUp>
           </div>
 
-          {/* Divider & Special Instructor — 一時非表示（将来再開用）
+          {/* Divider & Special Instructor */}
           <div className="flex items-center gap-6 my-20">
             <div className="flex-1 h-px bg-stone-200" />
             <span className="font-sans text-stone-300 text-xs tracking-[0.3em] uppercase">✦</span>
@@ -207,31 +207,39 @@ export default function Home() {
             <FadeUp className="w-full md:w-5/12">
               <div className="relative aspect-3/4 rounded-sm overflow-hidden">
                 <Image
-                  src="/images/special-instructor.png"
-                  alt="AMI（森亜沙美）"
+                  src="/images/ami.jpg"
+                  alt="AMI"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_20%]"
                 />
               </div>
             </FadeUp>
             <FadeUp delay={1} className="w-full md:w-7/12">
               <p className="font-sans text-stone-400 text-xs tracking-[0.2em] mb-3">特別講師</p>
               <h2 className="font-serif text-3xl md:text-4xl font-medium text-stone-800 mb-3 tracking-wide">
-                AMI
+                AMI<span className="text-2xl md:text-3xl font-sans ml-2">先生</span>
               </h2>
-              <p className="text-stone-500 font-sans text-sm mb-1">森 亜沙美</p>
-              <p className="text-stone-400 font-sans text-sm tracking-widest uppercase mb-8">Asami Mori</p>
+              <p className="text-stone-400 font-sans text-sm tracking-widest uppercase mb-6">Asami Mori</p>
               <div className="text-stone-500 font-sans leading-[2.2] text-sm md:text-base space-y-6 mb-10">
                 <p className="text-stone-700 font-serif text-base md:text-lg italic leading-relaxed border-l-2 border-stone-300 pl-6">
-                  「踊ることは、自分を知ること。<br className="hidden md:block"/>身体を通じた表現の楽しさを伝えたい」
+                  【月1回限定✨スペシャルダンスレッスン】
                 </p>
                 <p>
-                  テーマパークダンサーやバックダンサーとして第一線で活躍後、福岡を拠点にダンス指導に情熱を注ぐ。brillerでは主にダンステクニックと身体表現を担当。
+                  パワフルさと繊細さをあわせ持ち、エネルギー溢れる表現が魅力
+                </p>
+                <p>
+                  ミュージカルクラスのために、<br className="hidden md:block"/>
+                  歌やお芝居へとつながる“表現としてのダンス”を大切にしたレッスンを行ってくださいます。
                 </p>
               </div>
+              <Link 
+                href="/instructor/ami"
+                className="inline-flex items-center gap-3 text-stone-800 font-sans text-xs tracking-[0.15em] uppercase hover:text-stone-500 transition-colors border-b border-stone-300 hover:border-stone-500 pb-2"
+              >
+                詳細ページへ <span className="text-base leading-none">→</span>
+              </Link>
             </FadeUp>
           </div>
-          */}
         </div>
       </section>
 
